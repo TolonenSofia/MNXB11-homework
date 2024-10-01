@@ -1,0 +1,128 @@
+Only in /home/stolonen: answers.sh
+Only in /home/stolonen: .apptainer
+Only in /home/stolonen: .bash_history
+diff -y /etc/skel/.bash_logout /home/stolonen/.bash_logout
+# ~/.bash_logout						# ~/.bash_logout
+
+diff -y /etc/skel/.bash_profile /home/stolonen/.bash_profile
+# .bash_profile							# .bash_profile
+
+# Get the aliases and functions					# Get the aliases and functions
+if [ -f ~/.bashrc ]; then					if [ -f ~/.bashrc ]; then
+	. ~/.bashrc							. ~/.bashrc
+fi								fi
+
+							      >	export PATH="/projects/hep/fs10/mnxb11/bin:$PATH"
+# User specific environment and startup programs		# User specific environment and startup programs
+diff -y /etc/skel/.bashrc /home/stolonen/.bashrc
+# .bashrc							# .bashrc
+
+# Source global definitions					# Source global definitions
+if [ -f /etc/bashrc ]; then					if [ -f /etc/bashrc ]; then
+	. /etc/bashrc							. /etc/bashrc
+fi								fi
+
+# User specific environment					# User specific environment
+if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]		if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]
+then								then
+    PATH="$HOME/.local/bin:$HOME/bin:$PATH"			    PATH="$HOME/.local/bin:$HOME/bin:$PATH"
+fi								fi
+export PATH							export PATH
+
+# Uncomment the following line if you don't like systemctl's 	# Uncomment the following line if you don't like systemctl's 
+# export SYSTEMD_PAGER=						# export SYSTEMD_PAGER=
+
+# User specific aliases and functions				# User specific aliases and functions
+if [ -d ~/.bashrc.d ]; then					if [ -d ~/.bashrc.d ]; then
+	for rc in ~/.bashrc.d/*; do					for rc in ~/.bashrc.d/*; do
+		if [ -f "$rc" ]; then						if [ -f "$rc" ]; then
+			. "$rc"								. "$rc"
+		fi								fi
+	done								done
+fi								fi
+
+unset rc							unset rc
+Only in /home/stolonen: .cache
+Only in /home/stolonen: .config
+Only in /home/stolonen: Desktop
+Only in /home/stolonen: Documents
+Only in /home/stolonen: Downloads
+diff -y /etc/skel/.emacs /home/stolonen/.emacs
+;; .emacs							;; .emacs
+
+(custom-set-variables						(custom-set-variables
+ ;; uncomment to always end a file with a newline		 ;; uncomment to always end a file with a newline
+ ;'(require-final-newline t)					 ;'(require-final-newline t)
+ ;; uncomment to disable loading of "default.el" at startup	 ;; uncomment to disable loading of "default.el" at startup
+ ;'(inhibit-default-init t)					 ;'(inhibit-default-init t)
+ ;; default to unified diffs					 ;; default to unified diffs
+ '(diff-switches "-u"))						 '(diff-switches "-u"))
+
+;;; uncomment for CJK utf-8 support for non-Asian users		;;; uncomment for CJK utf-8 support for non-Asian users
+;; (require 'un-define)						;; (require 'un-define)
+Only in /home/stolonen: git
+Only in /home/stolonen: .gitconfig
+diff -y /etc/skel/.kshrc /home/stolonen/.kshrc
+# .kshrc							# .kshrc
+
+# Source global definitions					# Source global definitions
+if [ -f /etc/kshrc ]; then					if [ -f /etc/kshrc ]; then
+	. /etc/kshrc							. /etc/kshrc
+fi								fi
+
+# use emacs editing mode by default				# use emacs editing mode by default
+set -o emacs							set -o emacs
+
+# User specific aliases and functions				# User specific aliases and functions
+
+Only in /home/stolonen: .lesshst
+Only in /home/stolonen: .local
+Common subdirectories: /etc/skel/.mozilla and /home/stolonen/.mozilla
+Only in /home/stolonen: Music
+Only in /home/stolonen: myfirstfile.txt
+Only in /home/stolonen: .nv
+Only in /home/stolonen: Pictures
+Only in /home/stolonen: .pki
+Only in /home/stolonen: Public
+Only in /home/stolonen: sofia_tolonen_homework3.tgz
+Only in /home/stolonen: .ssh
+Only in /home/stolonen: Templates
+Only in /home/stolonen: TOP-MNXB11
+Only in /home/stolonen: Videos
+Only in /home/stolonen: .viminfo
+Only in /home/stolonen: .vscode
+diff -y /etc/skel/.zshrc /home/stolonen/.zshrc
+#								#
+# .zshrc is sourced in interactive shells.			# .zshrc is sourced in interactive shells.
+# It should contain commands to set up aliases,			# It should contain commands to set up aliases,
+# functions, options, key bindings, etc.			# functions, options, key bindings, etc.
+#								#
+
+autoload -U compinit						autoload -U compinit
+compinit							compinit
+
+#allow tab completion in the middle of a word			#allow tab completion in the middle of a word
+setopt COMPLETE_IN_WORD						setopt COMPLETE_IN_WORD
+
+## keep background processes at full speed			## keep background processes at full speed
+#setopt NOBGNICE						#setopt NOBGNICE
+## restart running processes on exit				## restart running processes on exit
+#setopt HUP							#setopt HUP
+
+## history							## history
+#setopt APPEND_HISTORY						#setopt APPEND_HISTORY
+## for sharing history between zsh processes			## for sharing history between zsh processes
+#setopt INC_APPEND_HISTORY					#setopt INC_APPEND_HISTORY
+#setopt SHARE_HISTORY						#setopt SHARE_HISTORY
+
+## never ever beep ever						## never ever beep ever
+#setopt NO_BEEP							#setopt NO_BEEP
+
+## automatically decide when to page a list of completions	## automatically decide when to page a list of completions
+#LISTMAX=0							#LISTMAX=0
+
+## disable mail checking					## disable mail checking
+#MAILCHECK=0							#MAILCHECK=0
+
+# autoload -U colors						# autoload -U colors
+#colors								#colors
