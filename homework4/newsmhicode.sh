@@ -103,8 +103,9 @@ FILTER_FILTEREDFILENAME="filtered_${FILTER_DATAFILE}"
 
 
 #############
-   #Code that finds which years between 2004 and 2024 that had the highest and 
-   #lowest lemperatures during august based on four time points during the day.
+   #For data between years 1990 and 1995: 
+   #logs the average temperature at 12:00:00 in august for each year
+   #finds the highest and lowest temperatures during august for four time points during the day.
       # Author: Sofia Tolonen 
 ###############
 
