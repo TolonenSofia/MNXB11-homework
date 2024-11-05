@@ -16,11 +16,9 @@ void read() {
 
     for (Int_t i = 0; i < N; i++) {
         tree->GetEntry(i);
-        if (magnitude) {
-            Double_t pxValue = magnitude->GetPx();
-            Double_t pyValue = magnitude->GetPy();
-            hist->Fill(pxValue, pyValue);
-        }
+        Double_t pxValue = magnitude->GetPx();
+        Double_t pyValue = magnitude->GetPy();
+        hist->Fill(pxValue, pyValue);
     }
 
     TCanvas *c1 = new TCanvas("c1", "Canvas", 800, 600);
