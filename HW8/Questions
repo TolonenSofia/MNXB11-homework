@@ -1,0 +1,9 @@
+1. What is the difference between struct and class?
+      Menbers of class is private while members of struct is private by default, can be worked around.
+2. Change the name from your_class to something that makes sense:
+      Named it MyClass but for later tasks made new since i didn't understand how else 
+      to show task 1 was run without errors.
+      For task 2 and 3 i call it Magnitude, momentum may have made more sense tho.
+3. Why do we need our class to be derived from the TObject?
+      When using root we want to have the base class TObject (mother of all root objects) 
+      to have a common set of methodes. It basically makes it easy to do root objects.
